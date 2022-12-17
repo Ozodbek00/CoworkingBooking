@@ -1,16 +1,20 @@
 ﻿using CoworkingBooking.Domain.Commons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CoworkingBooking.Domain.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace CoworkingBooking.Domain.Entities
 {
-    public class Student : Auditable
+    public sealed class Student : Auditable
     {
-        public string FirstName { get; set; } = String.Empty;
-        public string LastName { get; set; } = String.Empty;
-        public string PhoneNumber { get; set; } = String.Empty;
+        [MaxLength(32)]
+        public string FirstName { get; set; }
+
+        [MaxLength(32)]
+        public string LastName { get; set; }
+
+        [MaxLength(14)]
+        public string PhoneNumber { get; set; }
+
+        public UserRole UserRole { get; set; }
     }
 }

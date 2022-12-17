@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shakh\\Desktop\\loyiha\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj": {}
+    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shakh\\Desktop\\loyiha\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj": {
+    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shakh\\Desktop\\loyiha\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
+        "projectUniqueName": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
         "projectName": "CoworkingBooking.Api",
-        "projectPath": "C:\\Users\\shakh\\Desktop\\loyiha\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
-        "packagesPath": "C:\\Users\\shakh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shakh\\Desktop\\loyiha\\CoworkingBooking\\CoworkingBooking.Api\\obj\\",
+        "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
+        "packagesPath": "C:\\Users\\O'tkirbek\\.nuget\\packages\\",
+        "outputPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\shakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\O'tkirbek\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,187 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
+                "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj",
+        "projectName": "CoworkingBooking.Data",
+        "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj",
+        "packagesPath": "C:\\Users\\O'tkirbek\\.nuget\\packages\\",
+        "outputPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\O'tkirbek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj": {
+                "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj",
+        "projectName": "CoworkingBooking.Domain",
+        "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj",
+        "packagesPath": "C:\\Users\\O'tkirbek\\.nuget\\packages\\",
+        "outputPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\O'tkirbek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,12 +220,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.2.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -61,10 +231,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
             },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            }
+          ],
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

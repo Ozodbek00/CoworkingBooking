@@ -1,14 +1,11 @@
 ﻿using CoworkingBooking.Domain.Commons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace CoworkingBooking.Domain.Entities
 {
-    public class Branch : Auditable
+    public sealed class Branch : Auditable
     {
-        public string Name { get; set; } = String.Empty;
+        [MaxLength(32)]
+        public string Name { get; set; }
     }
 }
