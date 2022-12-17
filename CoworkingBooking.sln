@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoworkingBooking.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoworkingBooking.Data", "CoworkingBooking.Data\CoworkingBooking.Data.csproj", "{028017BD-B7ED-4A04-834A-EA9BD30FFA73}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoworkingBooking.Service", "CoworkingBooking.Service\CoworkingBooking.Service.csproj", "{4CA16241-CEA2-4B72-96E4-6EA628A7C3BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{028017BD-B7ED-4A04-834A-EA9BD30FFA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{028017BD-B7ED-4A04-834A-EA9BD30FFA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{028017BD-B7ED-4A04-834A-EA9BD30FFA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA16241-CEA2-4B72-96E4-6EA628A7C3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA16241-CEA2-4B72-96E4-6EA628A7C3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA16241-CEA2-4B72-96E4-6EA628A7C3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA16241-CEA2-4B72-96E4-6EA628A7C3BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

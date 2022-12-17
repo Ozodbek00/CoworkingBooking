@@ -224,19 +224,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\O'tkirbek\\.nuget\\packages\\": {}
+    "C:\\Users\\shakh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
+      "projectUniqueName": "C:\\Users\\shakh\\Desktop\\loyiha\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
       "projectName": "CoworkingBooking.Api",
-      "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
-      "packagesPath": "C:\\Users\\O'tkirbek\\.nuget\\packages\\",
-      "outputPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\obj\\",
+      "projectPath": "C:\\Users\\shakh\\Desktop\\loyiha\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
+      "packagesPath": "C:\\Users\\shakh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\shakh\\Desktop\\loyiha\\CoworkingBooking\\CoworkingBooking.Api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\O'tkirbek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\shakh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -244,6 +249,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -278,24 +284,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.11, 6.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.11, 6.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.11, 6.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.11, 6.0.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
