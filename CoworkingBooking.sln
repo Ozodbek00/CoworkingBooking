@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoworkingBooking.Api", "CoworkingBooking.Api\CoworkingBooking.Api.csproj", "{9E104995-D82B-4305-8316-A9C46FAEDCC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoworkingBooking.Api", "CoworkingBooking.Api\CoworkingBooking.Api.csproj", "{9E104995-D82B-4305-8316-A9C46FAEDCC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoworkingBooking.Domain", "CoworkingBooking.Domain\CoworkingBooking.Domain.csproj", "{27AA9E46-51E5-4B8F-A41D-CF047DABA679}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoworkingBooking.Data", "CoworkingBooking.Data\CoworkingBooking.Data.csproj", "{028017BD-B7ED-4A04-834A-EA9BD30FFA73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoworkingBooking.Service", "CoworkingBooking.Service'\CoworkingBooking.Service.csproj", "{D82FC7F1-85F0-4AB1-AC2E-64B9C4B18B44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{9E104995-D82B-4305-8316-A9C46FAEDCC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E104995-D82B-4305-8316-A9C46FAEDCC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E104995-D82B-4305-8316-A9C46FAEDCC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27AA9E46-51E5-4B8F-A41D-CF047DABA679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AA9E46-51E5-4B8F-A41D-CF047DABA679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27AA9E46-51E5-4B8F-A41D-CF047DABA679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27AA9E46-51E5-4B8F-A41D-CF047DABA679}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028017BD-B7ED-4A04-834A-EA9BD30FFA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028017BD-B7ED-4A04-834A-EA9BD30FFA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028017BD-B7ED-4A04-834A-EA9BD30FFA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028017BD-B7ED-4A04-834A-EA9BD30FFA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D82FC7F1-85F0-4AB1-AC2E-64B9C4B18B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82FC7F1-85F0-4AB1-AC2E-64B9C4B18B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82FC7F1-85F0-4AB1-AC2E-64B9C4B18B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82FC7F1-85F0-4AB1-AC2E-64B9C4B18B44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
