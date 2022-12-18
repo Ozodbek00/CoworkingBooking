@@ -17,7 +17,7 @@ namespace CoworkingBooking.Data.DbContexts
 
         public virtual DbSet<Chair> Chairs { get; set; }
 
-        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         public virtual DbSet<Order> Orders { get; set; }
     }

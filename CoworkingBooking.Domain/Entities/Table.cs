@@ -2,7 +2,7 @@
 
 namespace CoworkingBooking.Domain.Entities
 {
-    public sealed class Table : Auditable
+    public class Table : Auditable
     {
         public int Index { get; set; }
 
@@ -10,5 +10,7 @@ namespace CoworkingBooking.Domain.Entities
 
         public long FloorId { get; set; }
         public Floor Floor { get; set; }
+
+        public virtual ICollection<Chair> Chairs { get; set; }
     }
 }

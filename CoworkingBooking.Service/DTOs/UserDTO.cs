@@ -2,7 +2,7 @@
 
 namespace CoworkingBooking.Service.DTOs
 {
-    public class StudentDTO
+    public class UserDTO
     {
         public string FirstName { get; set; }
 

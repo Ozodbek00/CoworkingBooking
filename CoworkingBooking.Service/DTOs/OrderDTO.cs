@@ -6,7 +6,7 @@
 
         public DateTime LeaveAt { get; set; }
 
-        public long StudentId { get; set; }
+        public long UserId { get; set; }
 
         public long BranchId { get; set; }
 
