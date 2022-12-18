@@ -9,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
+
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IRepository<Branch>, Repository<Branch>>();
@@ -20,6 +22,8 @@ builder.Services.AddScoped<IRepository<Order>, Repository<Order>>();
 
 builder.Services.AddDbContext<CoworkingDBContext>(option =>
     option.UseNpgsql(builder.Configuration.GetConnectionString("CoworkingConnection")));
+
+builder.Services.AddAuthorization();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 

@@ -35,10 +35,15 @@ namespace CoworkingBooking.Service.Services
             if (order is not null)
                 throw new CBException(400, "Order with this index exists");
 
-            var branch = chairRepo.GetAsync(b => b.Id == orderDTO.ChairId);
+            var chair = chairRepo.GetAsync(b => b.Id == orderDTO.ChairId);
 
-            if (branch is null)
+            if (chair is null)
                 throw new CBException(404, "Chair with this id noes not exist");
+
+            var user = userRepo.GetAsync(b => b.Id == orderDTO.UserId);
+
+            if (user is null)
+                throw new CBException(404, "User with this id noes not exist");
 
             Order mappedOrder = mapper.Map<Order>(orderDTO);
             mappedOrder.CreatedAt = DateTime.UtcNow;
@@ -82,10 +87,15 @@ namespace CoworkingBooking.Service.Services
             if (order is null)
                 throw new CBException(404, "Order with this index does not exist");
 
-            var branch = chairRepo.GetAsync(b => b.Id == orderDTO.ChairId);
+            var chair = chairRepo.GetAsync(b => b.Id == orderDTO.ChairId);
 
-            if (branch is null)
-                throw new CBException(404, "Branch with this id noes not exist");
+            if (chair is null)
+                throw new CBException(404, "Chair with this id noes not exist");
+
+            var user = userRepo.GetAsync(b => b.Id == orderDTO.ChairId);
+
+            if (user is null)
+                throw new CBException(404, "User with this id noes not exist");
 
             Order mappedOrder = mapper.Map<Order>(orderDTO);
             mappedOrder.CreatedAt = order.Result.CreatedAt;

@@ -4,6 +4,7 @@ using CoworkingBooking.Data.Interfaces;
 using CoworkingBooking.Domain.Entities;
 using CoworkingBooking.Service.DTOs;
 using CoworkingBooking.Service.Exceptions;
+using CoworkingBooking.Service.Extensions;
 using CoworkingBooking.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -29,8 +30,16 @@ namespace CoworkingBooking.Service.Services
             if(user is not null)
                 throw new CBException(400, "User with this phone number exists");
 
+            var validUser = repository.GetAsync(expression: s =>
+                  s.Username.Equals(userDTO.Username, StringComparison.CurrentCultureIgnoreCase) ||
+                  s.Password.Equals(userDTO.Password.Encrypt(), StringComparison.CurrentCultureIgnoreCase));
+
+            if (validUser is not null)
+                throw new CBException(400, "Invalid password or username");
+
             User mappedUser = mapper.Map<User>(userDTO);
             mappedUser.CreatedAt = DateTime.UtcNow;
+            mappedUser.Password = mappedUser.Password.Encrypt();
 
             await repository.AddAsync(mappedUser);
 
@@ -67,7 +76,8 @@ namespace CoworkingBooking.Service.Services
         public async Task<UserDTO> UpdateAsync(UserDTO userDTO)
         {
             var User = repository.GetAsync(expression: s =>
-                  s.PhoneNumber.Equals(userDTO.PhoneNumber, StringComparison.CurrentCultureIgnoreCase));
+                  s.Username.Equals(userDTO.PhoneNumber, StringComparison.CurrentCultureIgnoreCase) ||
+                  s.Password.Equals(userDTO.Password.Encrypt(), StringComparison.CurrentCultureIgnoreCase));
 
             if (User is null)
                 throw new CBException(404, "User with this phone number does not exist");
@@ -75,6 +85,7 @@ namespace CoworkingBooking.Service.Services
             User mappedUser = mapper.Map<User>(userDTO);
             mappedUser.CreatedAt = User.Result.CreatedAt;
             mappedUser.UpdatedAt = DateTime.UtcNow;
+            mappedUser.Password = mappedUser.Password.Encrypt();
 
             await repository.UpdateAsync(mappedUser);
 
