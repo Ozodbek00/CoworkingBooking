@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CoworkingBooking.Data\CoworkingBooking.Data.csproj" />
     <ProjectReference Include="..\CoworkingBooking.Service\CoworkingBooking.Service.csproj" />
   </ItemGroup>

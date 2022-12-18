@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj": {}
+    "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj": {}
   },
   "projects": {
-    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj": {
+    "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
+        "projectUniqueName": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
         "projectName": "CoworkingBooking.Api",
-        "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
-        "packagesPath": "C:\\Users\\O'tkirbek\\.nuget\\packages\\",
-        "outputPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\obj\\",
+        "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
+        "packagesPath": "C:\\Users\\DEll\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\O'tkirbek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DEll\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
-                "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj"
+              "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
+                "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj"
               },
-              "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj": {
-                "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj"
+              "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj": {
+                "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj"
               }
             }
           }
@@ -77,24 +82,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -107,17 +94,21 @@
         }
       }
     },
-    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
+    "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj",
+        "projectUniqueName": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj",
         "projectName": "CoworkingBooking.Data",
-        "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj",
-        "packagesPath": "C:\\Users\\O'tkirbek\\.nuget\\packages\\",
-        "outputPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\obj\\",
+        "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj",
+        "packagesPath": "C:\\Users\\DEll\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\O'tkirbek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DEll\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -125,14 +116,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj": {
-                "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj"
+              "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj": {
+                "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj"
               }
             }
           }
@@ -169,20 +161,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -192,17 +170,21 @@
         }
       }
     },
-    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj": {
+    "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj",
         "projectName": "CoworkingBooking.Domain",
-        "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj",
-        "packagesPath": "C:\\Users\\O'tkirbek\\.nuget\\packages\\",
-        "outputPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\obj\\",
+        "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj",
+        "packagesPath": "C:\\Users\\DEll\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\O'tkirbek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DEll\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -210,6 +192,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -238,20 +221,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -261,17 +230,21 @@
         }
       }
     },
-    "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj": {
+    "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj",
+        "projectUniqueName": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj",
         "projectName": "CoworkingBooking.Service",
-        "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj",
-        "packagesPath": "C:\\Users\\O'tkirbek\\.nuget\\packages\\",
-        "outputPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Service\\obj\\",
+        "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj",
+        "packagesPath": "C:\\Users\\DEll\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\O'tkirbek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DEll\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -279,17 +252,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
-                "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj"
+              "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
+                "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj"
               },
-              "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj": {
-                "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj"
+              "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj": {
+                "projectPath": "C:\\Users\\DEll\\Desktop\\CoworkingBooking\\CoworkingBooking.Domain\\CoworkingBooking.Domain.csproj"
               }
             }
           }
@@ -320,20 +294,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.11, 6.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
