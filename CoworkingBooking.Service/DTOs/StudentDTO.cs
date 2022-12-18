@@ -4,8 +4,6 @@ namespace CoworkingBooking.Service.DTOs
 {
     public class StudentDTO
     {
-        public long Id { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }

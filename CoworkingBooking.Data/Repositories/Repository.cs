@@ -1,4 +1,5 @@
 ﻿using CoworkingBooking.Data.DbContexts;
+using CoworkingBooking.Data.Helpers;
 using CoworkingBooking.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -25,7 +26,7 @@ namespace CoworkingBooking.Data.Repositories
             return entry.Entity;
         }
 
-        public IQueryable<TSource> GetAll(Expression<Func<TSource, bool>> expression = null, 
+        public IQueryable<TSource> GetAll(int pageIndex, int pageSize, Expression<Func<TSource, bool>> expression = null, 
                     string[] includes = null, bool isTracking = true)
         {
             IQueryable<TSource> query = expression is null ? dbSet : dbSet.Where(expression);
@@ -37,11 +38,19 @@ namespace CoworkingBooking.Data.Repositories
             if (!isTracking)
                 query = query.AsNoTracking();
 
-            return query;
+            return query.Paginate(pageIndex, pageSize);
         }
 
         public async Task<TSource> GetAsync(Expression<Func<TSource, bool>> expression, string[] includes = null)
-            => await GetAll(expression, includes).FirstOrDefaultAsync();
+        {
+            IQueryable<TSource> query = expression is null ? dbSet : dbSet.Where(expression);
+
+            if (includes is not null)
+                foreach (var include in includes)
+                    query = query.Include(include);
+
+            return await query.FirstOrDefaultAsync();
+        }
 
         public async Task<TSource> UpdateAsync(TSource entity)
         {
