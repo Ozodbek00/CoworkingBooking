@@ -70,7 +70,7 @@ namespace CoworkingBooking.Service.Services
                   s.PhoneNumber.Equals(studentDTO.PhoneNumber, StringComparison.CurrentCultureIgnoreCase));
 
             if (student is null)
-                throw new CBException(400, "Student with this phone number does not exist");
+                throw new CBException(404, "Student with this phone number does not exist");
 
             Student mappedStudent = mapper.Map<Student>(studentDTO);
             mappedStudent.CreatedAt = student.Result.CreatedAt;
