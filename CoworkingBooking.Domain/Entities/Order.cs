@@ -8,8 +8,8 @@ namespace CoworkingBooking.Domain.Entities
 
         public DateTime LeaveAt { get; set; }
         
-        public long StudentId { get; set; }
-        public Student Student { get; set; }
+        public long UserId { get; set; }
+        public User User { get; set; }
         
         public long BranchId { get; set; }
         public Branch Branch { get; set; }
