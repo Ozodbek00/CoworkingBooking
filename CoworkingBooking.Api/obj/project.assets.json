@@ -560,6 +560,21 @@
         "runtime": {
           "bin/placeholder/CoworkingBooking.Domain.dll": {}
         }
+      },
+      "CoworkingBooking.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "12.0.0",
+          "CoworkingBooking.Data": "1.0.0",
+          "CoworkingBooking.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CoworkingBooking.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CoworkingBooking.Service.dll": {}
+        }
       }
     }
   },
@@ -1411,12 +1426,18 @@
       "type": "project",
       "path": "../CoworkingBooking.Domain/CoworkingBooking.Domain.csproj",
       "msbuildProject": "../CoworkingBooking.Domain/CoworkingBooking.Domain.csproj"
+    },
+    "CoworkingBooking.Service/1.0.0": {
+      "type": "project",
+      "path": "../CoworkingBooking.Service/CoworkingBooking.Service.csproj",
+      "msbuildProject": "../CoworkingBooking.Service/CoworkingBooking.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "CoworkingBooking.Data >= 1.0.0",
+      "CoworkingBooking.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
@@ -1451,6 +1472,9 @@
           "projectReferences": {
             "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj": {
               "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Data\\CoworkingBooking.Data.csproj"
+            },
+            "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj": {
+              "projectPath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Service\\CoworkingBooking.Service.csproj"
             }
           }
         }

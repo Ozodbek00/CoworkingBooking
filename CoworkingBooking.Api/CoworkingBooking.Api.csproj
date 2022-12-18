@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CoworkingBooking.Data\CoworkingBooking.Data.csproj" />
+    <ProjectReference Include="..\CoworkingBooking.Service\CoworkingBooking.Service.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,6 +2,7 @@ using CoworkingBooking.Data.DbContexts;
 using CoworkingBooking.Data.Interfaces;
 using CoworkingBooking.Data.Repositories;
 using CoworkingBooking.Domain.Entities;
+using CoworkingBooking.Service.Mappers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +21,7 @@ builder.Services.AddScoped<IRepository<Order>, Repository<Order>>();
 builder.Services.AddDbContext<CoworkingDBContext>(option =>
     option.UseNpgsql(builder.Configuration.GetConnectionString("CoworkingConnection")));
 
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
