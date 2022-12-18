@@ -54,7 +54,7 @@ namespace CoworkingBooking.Service.Services
             await repository.DeleteAsync(Floor);
         }
 
-        public async Task<FloorDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Floor, bool>> expression)
+        public async Task<FloorDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Floor, bool>> expression = null)
         {
             return await repository.GetAll(pageIndex, pageSize, expression)
                 .ProjectTo<FloorDTO>(mapper.ConfigurationProvider).ToArrayAsync();
@@ -70,9 +70,9 @@ namespace CoworkingBooking.Service.Services
             return mapper.Map<FloorDTO>(Floor);
         }
 
-        public async Task<FloorDTO> UpdateAsync(FloorDTO floorDTO)
+        public async Task<FloorDTO> UpdateAsync(long id, FloorDTO floorDTO)
         {
-            var Floor = repository.GetAsync(expression: s => s.Index == floorDTO.Index);
+            var Floor = repository.GetAsync(expression: s => s.Id == id);
 
             if (Floor is null)
                 throw new CBException(404, "Floor with this index does not exist");

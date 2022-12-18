@@ -7,43 +7,43 @@ namespace CoworkingBooking.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BranchesController : ControllerBase
+    public class TablesController : ControllerBase
     {
-        private readonly IBranchService branchService;
+        private readonly ITableService tableService;
 
-        public BranchesController(IBranchService branchService)
+        public TablesController(ITableService tableService)
         {
-            this.branchService = branchService;
+            this.tableService = tableService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllAsync([FromQuery] int pageIndex, int pageSize)
         {
-            return Ok(await branchService.GetAllAsync(pageIndex, pageSize));
+            return Ok(await tableService.GetAllAsync(pageIndex, pageSize));
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(long id)
         {
-            return Ok(await branchService.GetAsync(b => b.Id == id));
+            return Ok(await tableService.GetAsync(b => b.Id == id));
         }
 
         [HttpPost, Authorize(Roles = "Admin")]
-        public async Task<IActionResult> CreateAsync(BranchDTO branchDto)
+        public async Task<IActionResult> CreateAsync(TableDTO tableDto)
         {
-            return Ok(await branchService.CreateAsync(branchDto));
+            return Ok(await tableService.CreateAsync(tableDto));
         }
 
         [HttpPut("{id}"), Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateAsync(long id, BranchDTO branchDto)
+        public async Task<IActionResult> UpdateAsync(long id, TableDTO tableDto)
         {
-            return Ok(await branchService.UpdateAsync(id, branchDto));
+            return Ok(await tableService.UpdateAsync(id, tableDto));
         }
 
         [HttpDelete("{id}"), Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteAsync(long id)
         {
-            return Ok(branchService.DeleteAsync(id));
+            return Ok(tableService.DeleteAsync(id));
         }
     }
 }

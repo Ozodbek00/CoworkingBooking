@@ -54,7 +54,7 @@ namespace CoworkingBooking.Service.Services
             await repository.DeleteAsync(Chair);
         }
 
-        public async Task<ChairDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Chair, bool>> expression)
+        public async Task<ChairDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Chair, bool>> expression = null)
         {
             return await repository.GetAll(pageIndex, pageSize, expression)
                 .ProjectTo<ChairDTO>(mapper.ConfigurationProvider).ToArrayAsync();
@@ -70,9 +70,9 @@ namespace CoworkingBooking.Service.Services
             return mapper.Map<ChairDTO>(Chair);
         }
 
-        public async Task<ChairDTO> UpdateAsync(ChairDTO chairDTO)
+        public async Task<ChairDTO> UpdateAsync(long id, ChairDTO chairDTO)
         {
-            var Chair = repository.GetAsync(expression: s => s.Index == chairDTO.Index);
+            var Chair = await repository.GetAsync(expression: s => s.Id == id);
 
             if (Chair is null)
                 throw new CBException(404, "Chair with this index does not exist");
@@ -83,7 +83,7 @@ namespace CoworkingBooking.Service.Services
                 throw new CBException(404, "Table with this id noes not exist");
 
             Chair mappedChair = mapper.Map<Chair>(chairDTO);
-            mappedChair.CreatedAt = Chair.Result.CreatedAt;
+            mappedChair.CreatedAt = Chair.CreatedAt;
             mappedChair.UpdatedAt = DateTime.UtcNow;
 
             await repository.UpdateAsync(mappedChair);

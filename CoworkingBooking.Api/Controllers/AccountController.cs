@@ -2,7 +2,6 @@
 using CoworkingBooking.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Runtime.CompilerServices;
 
 namespace CoworkingBooking.Api.Controllers
 {

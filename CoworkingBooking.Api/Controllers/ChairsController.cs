@@ -7,43 +7,43 @@ namespace CoworkingBooking.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BranchesController : ControllerBase
+    public class ChairsController : ControllerBase
     {
-        private readonly IBranchService branchService;
+        private readonly IChairService chairService;
 
-        public BranchesController(IBranchService branchService)
+        public ChairsController(IChairService chairService)
         {
-            this.branchService = branchService;
+            this.chairService = chairService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllAsync([FromQuery] int pageIndex, int pageSize)
         {
-            return Ok(await branchService.GetAllAsync(pageIndex, pageSize));
+            return Ok(await chairService.GetAllAsync(pageIndex, pageSize));
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(long id)
         {
-            return Ok(await branchService.GetAsync(b => b.Id == id));
+            return Ok(await chairService.GetAsync(b => b.Id == id));
         }
 
         [HttpPost, Authorize(Roles = "Admin")]
-        public async Task<IActionResult> CreateAsync(BranchDTO branchDto)
+        public async Task<IActionResult> CreateAsync(ChairDTO chairDto)
         {
-            return Ok(await branchService.CreateAsync(branchDto));
+            return Ok(await chairService.CreateAsync(chairDto));
         }
 
         [HttpPut("{id}"), Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateAsync(long id, BranchDTO branchDto)
+        public async Task<IActionResult> UpdateAsync(long id, ChairDTO chairDto)
         {
-            return Ok(await branchService.UpdateAsync(id, branchDto));
+            return Ok(await chairService.UpdateAsync(id, chairDto));
         }
 
         [HttpDelete("{id}"), Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteAsync(long id)
         {
-            return Ok(branchService.DeleteAsync(id));
+            return Ok(chairService.DeleteAsync(id));
         }
     }
 }

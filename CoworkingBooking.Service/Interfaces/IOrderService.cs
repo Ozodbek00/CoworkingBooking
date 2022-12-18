@@ -7,9 +7,9 @@ namespace CoworkingBooking.Service.Interfaces
     public interface IOrderService
     {
         Task<OrderDTO> CreateAsync(OrderDTO orderDTO);
-        Task<OrderDTO> UpdateAsync(OrderDTO orderDTO);
+        Task<OrderDTO> UpdateAsync(long id, OrderDTO orderDTO);
         Task DeleteAsync(long id);
         Task<OrderDTO> GetAsync(Expression<Func<Order, bool>> expression);
-        Task<OrderDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Order, bool>> expression);
+        Task<OrderDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Order, bool>> expression = null);
     }
 }

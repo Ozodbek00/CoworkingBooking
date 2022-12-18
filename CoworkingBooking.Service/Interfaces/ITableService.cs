@@ -7,9 +7,9 @@ namespace CoworkingBooking.Service.Interfaces
     public interface ITableService
     {
         Task<TableDTO> CreateAsync(TableDTO tableDTO);
-        Task<TableDTO> UpdateAsync(TableDTO tableDTO);
+        Task<TableDTO> UpdateAsync(long id, TableDTO tableDTO);
         Task DeleteAsync(long id);
         Task<TableDTO> GetAsync(Expression<Func<Table, bool>> expression);
-        Task<TableDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Table, bool>> expression);
+        Task<TableDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Table, bool>> expression = null);
     }
 }
