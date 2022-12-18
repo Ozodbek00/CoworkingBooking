@@ -1,3 +1,5 @@
+using CoworkingBooking.Api.Configurations;
+using CoworkingBooking.Api.Middlewares;
 using CoworkingBooking.Data.DbContexts;
 using CoworkingBooking.Data.Interfaces;
 using CoworkingBooking.Data.Repositories;
@@ -12,7 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-
+builder.ConfigureJwt();
+builder.Services.ConfigureSwaggerAuthorize();
 builder.Services.AddScoped<IRepository<Branch>, Repository<Branch>>();
 builder.Services.AddScoped<IRepository<Floor>, Repository<Floor>>();
 builder.Services.AddScoped<IRepository<Table>, Repository<Table>>();
@@ -43,7 +46,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
+
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 
 app.MapControllers();
 

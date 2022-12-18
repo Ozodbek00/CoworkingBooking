@@ -1,4 +1,5 @@
 ﻿using CoworkingBooking.Service.DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,12 +9,10 @@ namespace CoworkingBooking.Api.Controllers
     [ApiController]
     public class BranchesController : ControllerBase
     {
-#pragma warning disable CS1998 
-        [HttpGet]
+        [HttpGet, Authorize(Roles = "User")]
         public async Task<IActionResult> GetAllAsync()
-
         {
-            return Ok();
+            return Ok("Salom");
         }
 
         [HttpGet("{id}")]
@@ -23,6 +22,7 @@ namespace CoworkingBooking.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "User")]
         public async Task<IActionResult> CreateAsync(BranchDTO branchDto)
         {
             return Ok();
