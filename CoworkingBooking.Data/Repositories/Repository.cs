@@ -10,7 +10,7 @@ namespace CoworkingBooking.Data.Repositories
         protected readonly CoworkingDBContext dbContext;
         protected readonly DbSet<TSource> dbSet;
 
-        public Repository(CoworkingDBContext dbContext, DbSet<TSource> dbSet)
+        public Repository(CoworkingDBContext dbContext)
         {
             this.dbContext = dbContext;
             this.dbSet = dbContext.Set<TSource>();
