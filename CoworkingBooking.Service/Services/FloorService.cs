@@ -67,8 +67,6 @@ namespace CoworkingBooking.Service.Services
             if (Floor is null)
                 throw new CBException(404, "Floor not found");
 
-
-
             return mapper.Map<FloorDTO>(Floor);
         }
 
@@ -78,6 +76,11 @@ namespace CoworkingBooking.Service.Services
 
             if (Floor is null)
                 throw new CBException(404, "Floor with this index does not exist");
+
+            var branch = branchRepo.GetAsync(b => b.Id == floorDTO.BranchId);
+
+            if (branch is null)
+                throw new CBException(404, "Branch with this id noes not exist");
 
             Floor mappedFloor = mapper.Map<Floor>(floorDTO);
             mappedFloor.CreatedAt = Floor.Result.CreatedAt;

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CoworkingBooking.Domain.Entities
 {
-    public sealed class Student : Auditable
+    public class User : Auditable
     {
         [MaxLength(32)]
         public string FirstName { get; set; }
@@ -16,5 +16,7 @@ namespace CoworkingBooking.Domain.Entities
         public string PhoneNumber { get; set; }
 
         public UserRole UserRole { get; set; }
+
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

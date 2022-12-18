@@ -12,7 +12,7 @@ namespace CoworkingBooking.Service.Mappers
             CreateMap<Floor, FloorDTO>().ReverseMap();
             CreateMap<Table, TableDTO>().ReverseMap();
             CreateMap<Chair, ChairDTO>().ReverseMap();
-            CreateMap<Student, StudentDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<Order, OrderDTO>().ReverseMap();
         }
     }
