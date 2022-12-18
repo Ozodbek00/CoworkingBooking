@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Interfaces\" />
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoworkingBooking.Data\CoworkingBooking.Data.csproj" />
+    <ProjectReference Include="..\CoworkingBooking.Domain\CoworkingBooking.Domain.csproj" />
   </ItemGroup>
 
 </Project>

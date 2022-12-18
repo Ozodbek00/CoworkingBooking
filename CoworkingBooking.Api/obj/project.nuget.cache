@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "iMu+2RuGxZEvhEwr04S+tMPNYiaiLxN7DTZiJvqxvqEQwvfa0b9G+oNfFb1pMpbd8tmwu6tXmkQNcr5AS449aw==",
+  "dgSpecHash": "LFkddYxqY/aIQqUkowimJ5Xo/dd7buwY3oF+S+nPiF6FBZCa2FLRT6akty25IjageruzzPomWYlLW8vvz8nwxw==",
   "success": true,
   "projectFilePath": "D:\\Ozodbekkkkk\\Codes\\DotNet\\CoworkingBooking.Api\\CoworkingBooking.Api\\CoworkingBooking.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\O'tkirbek\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\O'tkirbek\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\O'tkirbek\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\O'tkirbek\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\O'tkirbek\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.1\\microsoft.entityframeworkcore.7.0.1.nupkg.sha512",
     "C:\\Users\\O'tkirbek\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.1\\microsoft.entityframeworkcore.abstractions.7.0.1.nupkg.sha512",
     "C:\\Users\\O'tkirbek\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.1\\microsoft.entityframeworkcore.analyzers.7.0.1.nupkg.sha512",
