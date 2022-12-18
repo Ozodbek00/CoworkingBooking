@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using CoworkingBooking.Service.DTOs;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CoworkingBooking.Api.Controllers
 {
@@ -24,13 +23,13 @@ namespace CoworkingBooking.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync()
+        public async Task<IActionResult> CreateAsync(BranchDTO branchDto)
         {
             return Ok();
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAsync(long id)
+        public async Task<IActionResult> UpdateAsync(long id, BranchDTO branchDto)
         {
             return Ok();
         }
