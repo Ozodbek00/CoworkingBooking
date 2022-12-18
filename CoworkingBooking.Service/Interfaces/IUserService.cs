@@ -6,6 +6,7 @@ namespace CoworkingBooking.Service.Interfaces
 {
     public interface IUserService
     {
+        Task<string> LoginAsync(string username, string password);
         Task<UserDTO> CreateAsync(UserDTO userDTO);
         Task<UserDTO> UpdateAsync(UserDTO userDTO);
         Task DeleteAsync(long id);
