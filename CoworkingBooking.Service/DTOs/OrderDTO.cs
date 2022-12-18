@@ -8,12 +8,6 @@
 
         public long UserId { get; set; }
 
-        public long BranchId { get; set; }
-
-        public long FloorId { get; set; }
-
-        public long TableId { get; set; }
-
         public long ChairId { get; set; }
     }
 }

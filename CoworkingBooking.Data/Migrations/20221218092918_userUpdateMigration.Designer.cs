@@ -3,6 +3,7 @@ using System;
 using CoworkingBooking.Data.DbContexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CoworkingBooking.Data.Migrations
 {
     [DbContext(typeof(CoworkingDBContext))]
-    partial class CoworkingDBContextModelSnapshot : ModelSnapshot
+    [Migration("20221218092918_userUpdateMigration")]
+    partial class userUpdateMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
