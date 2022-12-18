@@ -2,7 +2,9 @@ using CoworkingBooking.Data.DbContexts;
 using CoworkingBooking.Data.Interfaces;
 using CoworkingBooking.Data.Repositories;
 using CoworkingBooking.Domain.Entities;
+using CoworkingBooking.Service.Interfaces;
 using CoworkingBooking.Service.Mappers;
+using CoworkingBooking.Service.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,9 @@ builder.Services.AddScoped<IRepository<Table>, Repository<Table>>();
 builder.Services.AddScoped<IRepository<Chair>, Repository<Chair>>();
 builder.Services.AddScoped<IRepository<User>, Repository<User>>();
 builder.Services.AddScoped<IRepository<Order>, Repository<Order>>();
+
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 builder.Services.AddDbContext<CoworkingDBContext>(option =>
     option.UseNpgsql(builder.Configuration.GetConnectionString("CoworkingConnection")));
