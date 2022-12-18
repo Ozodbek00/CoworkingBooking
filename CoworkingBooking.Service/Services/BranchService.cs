@@ -21,20 +21,20 @@ namespace CoworkingBooking.Service.Services
             this.mapper = mapper;
         }
 
-        public async Task<BranchDTO> CreateAsync(BranchDTO BranchDTO)
+        public async Task<BranchDTO> CreateAsync(BranchDTO branchDTO)
         {
-            var Branch = repository.GetAsync(expression: s =>
-                  s.Name.Equals(BranchDTO.Name, StringComparison.CurrentCultureIgnoreCase));
+            var branch = await repository.GetAsync(expression: s =>
+                  s.Name.Equals(branchDTO.Name));
 
-            if (Branch is not null)
+            if (branch is not null)
                 throw new CBException(400, "Branch with this name exists");
 
-            Branch mappedBranch = mapper.Map<Branch>(BranchDTO);
+            Branch mappedBranch = mapper.Map<Branch>(branchDTO);
             mappedBranch.CreatedAt = DateTime.UtcNow;
 
             await repository.AddAsync(mappedBranch);
 
-            return BranchDTO;
+            return branchDTO;
         }
 
         public async Task DeleteAsync(long id)
@@ -48,7 +48,7 @@ namespace CoworkingBooking.Service.Services
             await repository.DeleteAsync(Branch);
         }
 
-        public async Task<BranchDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Branch, bool>> expression)
+        public async Task<BranchDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Branch, bool>> expression = null)
         {
             return await repository.GetAll(pageIndex, pageSize, expression)
                 .ProjectTo<BranchDTO>(mapper.ConfigurationProvider).ToArrayAsync();
@@ -64,21 +64,20 @@ namespace CoworkingBooking.Service.Services
             return mapper.Map<BranchDTO>(Branch);
         }
 
-        public async Task<BranchDTO> UpdateAsync(BranchDTO BranchDTO)
+        public async Task<BranchDTO> UpdateAsync(long id, BranchDTO branchDTO)
         {
-            var Branch = repository.GetAsync(expression: s =>
-                  s.Name.Equals(BranchDTO.Name, StringComparison.CurrentCultureIgnoreCase));
+            var branch = await repository.GetAsync(expression: s => s.Id == id);
 
-            if (Branch is null)
+            if (branch is null)
                 throw new CBException(404, "Branch with this name does not exist");
 
-            Branch mappedBranch = mapper.Map<Branch>(BranchDTO);
-            mappedBranch.CreatedAt = Branch.Result.CreatedAt;
+            Branch mappedBranch = mapper.Map<Branch>(branchDTO);
+            mappedBranch.CreatedAt = branch.CreatedAt;
             mappedBranch.UpdatedAt = DateTime.UtcNow;
 
             await repository.UpdateAsync(mappedBranch);
 
-            return BranchDTO;
+            return branchDTO;
         }
     }
 }

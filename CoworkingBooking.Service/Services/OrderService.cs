@@ -59,7 +59,7 @@ namespace CoworkingBooking.Service.Services
             await repository.DeleteAsync(Order);
         }
 
-        public async Task<OrderDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Order, bool>> expression)
+        public async Task<OrderDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Order, bool>> expression = null)
         {
             return await repository.GetAll(pageIndex, pageSize, expression)
                 .ProjectTo<OrderDTO>(mapper.ConfigurationProvider).ToArrayAsync();
@@ -75,9 +75,9 @@ namespace CoworkingBooking.Service.Services
             return mapper.Map<OrderDTO>(Order);
         }
 
-        public async Task<OrderDTO> UpdateAsync(OrderDTO orderDTO)
+        public async Task<OrderDTO> UpdateAsync(long id, OrderDTO orderDTO)
         {
-            var order = repository.GetAsync(expression: s => s.StartAt == orderDTO.StartAt);
+            var order = await repository.GetAsync(expression: s => s.Id == id);
 
             if (order is null)
                 throw new CBException(404, "Order with this index does not exist");
@@ -88,7 +88,7 @@ namespace CoworkingBooking.Service.Services
                 throw new CBException(404, "Branch with this id noes not exist");
 
             Order mappedOrder = mapper.Map<Order>(orderDTO);
-            mappedOrder.CreatedAt = order.Result.CreatedAt;
+            mappedOrder.CreatedAt = order.CreatedAt;
             mappedOrder.UpdatedAt = DateTime.UtcNow;
 
             await repository.UpdateAsync(mappedOrder);

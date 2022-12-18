@@ -7,43 +7,43 @@ namespace CoworkingBooking.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BranchesController : ControllerBase
+    public class FloorsController : ControllerBase
     {
-        private readonly IBranchService branchService;
+        private readonly IFloorService floorService;
 
-        public BranchesController(IBranchService branchService)
+        public FloorsController(IFloorService floorService)
         {
-            this.branchService = branchService;
+            this.floorService = floorService;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllAsync([FromQuery] int pageIndex, int pageSize)
         {
-            return Ok(await branchService.GetAllAsync(pageIndex, pageSize));
+            return Ok(await floorService.GetAllAsync(pageIndex, pageSize));
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(long id)
         {
-            return Ok(await branchService.GetAsync(b => b.Id == id));
+            return Ok(await floorService.GetAsync(b => b.Id == id));
         }
 
         [HttpPost, Authorize(Roles = "Admin")]
-        public async Task<IActionResult> CreateAsync(BranchDTO branchDto)
+        public async Task<IActionResult> CreateAsync(FloorDTO floorDto)
         {
-            return Ok(await branchService.CreateAsync(branchDto));
+            return Ok(await floorService.CreateAsync(floorDto));
         }
 
         [HttpPut("{id}"), Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateAsync(long id, BranchDTO branchDto)
+        public async Task<IActionResult> UpdateAsync(long id, FloorDTO floorDto)
         {
-            return Ok(await branchService.UpdateAsync(id, branchDto));
+            return Ok(await floorService.UpdateAsync(id, floorDto));
         }
 
         [HttpDelete("{id}"), Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteAsync(long id)
         {
-            return Ok(branchService.DeleteAsync(id));
+            return Ok(floorService.DeleteAsync(id));
         }
     }
 }

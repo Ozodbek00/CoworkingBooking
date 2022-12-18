@@ -54,7 +54,7 @@ namespace CoworkingBooking.Service.Services
             await repository.DeleteAsync(Table);
         }
 
-        public async Task<TableDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Table, bool>> expression)
+        public async Task<TableDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<Table, bool>> expression = null)
         {
             return await repository.GetAll(pageIndex, pageSize, expression)
                 .ProjectTo<TableDTO>(mapper.ConfigurationProvider).ToArrayAsync();
@@ -62,19 +62,19 @@ namespace CoworkingBooking.Service.Services
 
         public async Task<TableDTO> GetAsync(Expression<Func<Table, bool>> expression)
         {
-            var Table = await repository.GetAsync(expression);
+            var table = await repository.GetAsync(expression);
 
-            if (Table is null)
+            if (table is null)
                 throw new CBException(404, "Table not found");
 
-            return mapper.Map<TableDTO>(Table);
+            return mapper.Map<TableDTO>(table);
         }
 
-        public async Task<TableDTO> UpdateAsync(TableDTO tableDTO)
+        public async Task<TableDTO> UpdateAsync(long id, TableDTO tableDTO)
         {
-            var Table = repository.GetAsync(expression: s => s.Index == tableDTO.Index);
+            var table = await repository.GetAsync(expression: s => s.Id == id);
 
-            if (Table is null)
+            if (table is null)
                 throw new CBException(404, "Table with this index does not exist");
 
             var branch = floorRepo.GetAsync(b => b.Id == tableDTO.FloorId);
@@ -83,7 +83,7 @@ namespace CoworkingBooking.Service.Services
                 throw new CBException(404, "Floor with this id noes not exist");
 
             Table mappedTable = mapper.Map<Table>(tableDTO);
-            mappedTable.CreatedAt = Table.Result.CreatedAt;
+            mappedTable.CreatedAt = table.CreatedAt;
             mappedTable.UpdatedAt = DateTime.UtcNow;
 
             await repository.UpdateAsync(mappedTable);

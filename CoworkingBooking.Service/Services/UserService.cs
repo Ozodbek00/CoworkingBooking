@@ -59,7 +59,7 @@ namespace CoworkingBooking.Service.Services
             await repository.DeleteAsync(user);
         }
 
-        public async Task<UserDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<User, bool>> expression)
+        public async Task<UserDTO[]> GetAllAsync(int pageIndex, int pageSize, Expression<Func<User, bool>> expression = null)
         {
             return await repository.GetAll(pageIndex, pageSize, expression)
                 .ProjectTo<UserDTO>(mapper.ConfigurationProvider).ToArrayAsync();
@@ -84,17 +84,17 @@ namespace CoworkingBooking.Service.Services
             return await authService.GenerateTokenAsync(user);
         }
 
-        public async Task<UserDTO> UpdateAsync(UserDTO userDTO)
+        public async Task<UserDTO> UpdateAsync(long id, UserDTO userDTO)
         {
-            var User = repository.GetAsync(expression: s =>
-                  s.Username.Equals(userDTO.PhoneNumber, StringComparison.CurrentCultureIgnoreCase) ||
-                  s.Password.Equals(userDTO.Password.Encrypt(), StringComparison.CurrentCultureIgnoreCase));
+            var user = await repository.GetAsync(expression: s => s.Id == id);
 
-            if (User is null)
-                throw new CBException(404, "User with this phone number does not exist");
+            if (user is null)
+                throw new CBException(404, "User not found!");
+
+            var passUser = await repository.GetAsync(u => u.Password.Equals(userDTO.Password.Encrypt()));
 
             User mappedUser = mapper.Map<User>(userDTO);
-            mappedUser.CreatedAt = User.Result.CreatedAt;
+            mappedUser.CreatedAt = user.CreatedAt;
             mappedUser.UpdatedAt = DateTime.UtcNow;
             mappedUser.Password = mappedUser.Password.Encrypt();
 

@@ -25,6 +25,12 @@ builder.Services.AddScoped<IRepository<Order>, Repository<Order>>();
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IBranchService, BranchService>();
+builder.Services.AddScoped<IFloorService, FloorService>();
+builder.Services.AddScoped<ITableService, TableService>();
+builder.Services.AddScoped<IChairService, ChairService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+
 
 builder.Services.AddDbContext<CoworkingDBContext>(option =>
     option.UseNpgsql(builder.Configuration.GetConnectionString("CoworkingConnection")));
