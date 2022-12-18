@@ -15,6 +15,12 @@ namespace CoworkingBooking.Domain.Entities
         [MaxLength(14)]
         public string PhoneNumber { get; set; }
 
+        [MaxLength(16)]
+        public string Username { get; set; }
+
+        [MaxLength(100)]
+        public string Password { get; set; }
+
         public UserRole UserRole { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }
