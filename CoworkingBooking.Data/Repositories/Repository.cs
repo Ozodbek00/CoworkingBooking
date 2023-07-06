@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace CoworkingBooking.Data.Repositories
 {
-    public class Repository<TSource> : IRepository<TSource> where TSource : class
+    public sealed class Repository<TSource> : IRepository<TSource> where TSource : class
     {
         protected readonly CoworkingDBContext dbContext;
         protected readonly DbSet<TSource> dbSet;
